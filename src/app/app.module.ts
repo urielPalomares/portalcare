@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule, NbMenuModule, NbSidebarModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
 const appRoutes: Routes = [];
@@ -15,7 +18,13 @@ const appRoutes: Routes = [];
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbMenuModule.forRoot(),
+    NbSidebarModule.forRoot()
   ],
   declarations: [
     AppComponent,

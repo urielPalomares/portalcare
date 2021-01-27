@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PatientsComponent } from './patients.component'
 import { ListComponent } from './list/list.component';
 import { RegisterComponent } from './register/register.component';
+import { NbLayoutModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
 
 const routes = [
   {
@@ -27,6 +28,9 @@ const routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+    NbSidebarModule.forRoot()
   ],
   bootstrap: [PatientsComponent]
 })
